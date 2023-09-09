@@ -7,4 +7,7 @@ require('plugins.autocompletion')
 require('plugins.lspconfig')
 require('options')
 require('keymaps')
-vim.cmd.colorscheme 'nordic'
+
+vim.o.background = "dark" -- or "light" for light mode
+vim.cmd([[colorscheme gruvbox]])
+

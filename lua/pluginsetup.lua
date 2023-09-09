@@ -36,7 +36,7 @@ return require('packer').startup(function(use)
 
   -- Color Scheme
   use 'AlexvZyl/nordic.nvim'
-
+  use 'ellisonleao/gruvbox.nvim'
   -- cmp 
   use 'hrsh7th/nvim-cmp'
   use 'hrsh7th/cmp-buffer'
@@ -62,6 +62,8 @@ return require('packer').startup(function(use)
             ts_update()
         end,
     }
+
+
   if packer_bootstrap then
     require('packer').sync()
   end

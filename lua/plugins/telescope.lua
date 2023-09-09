@@ -5,7 +5,7 @@ require('telescope').setup{
     mappings = {
       i = {
         ['C-k>'] = action.move_selection_previous,
-        ['C-k>'] = action.move_selection_next
+        ['C-j>'] = action.move_selection_next
       }
     }
   }
