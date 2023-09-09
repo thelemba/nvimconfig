@@ -3,7 +3,8 @@ require('plugins.nvim-tree')
 require('plugins.telescope')
 require('plugins.lualine')
 require('plugins.treesitter')
+require('plugins.autocompletion')
+require('plugins.lspconfig')
 require('options')
 require('keymaps')
-
 vim.cmd.colorscheme 'nordic'

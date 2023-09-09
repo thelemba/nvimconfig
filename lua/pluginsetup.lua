@@ -34,8 +34,27 @@ return require('packer').startup(function(use)
   requires = { 'nvim-tree/nvim-web-devicons', opt = true }
   }
 
+  -- Color Scheme
   use 'AlexvZyl/nordic.nvim'
 
+  -- cmp 
+  use 'hrsh7th/nvim-cmp'
+  use 'hrsh7th/cmp-buffer'
+  use 'hrsh7th/cmp-path'
+  use 'hrsh7th/cmp-cmdline'
+
+-- snippet
+  use 'saadparwaiz1/cmp_luasnip'
+  use 'L3MON4D3/LuaSnip'
+  use 'rafamadriz/friendly-snippets'
+
+-- LSP
+  use {
+      "williamboman/mason.nvim",
+      "williamboman/mason-lspconfig.nvim",
+      "neovim/nvim-lspconfig",
+  }
+  -- Treesitter
   use {
     'nvim-treesitter/nvim-treesitter',
       run = function()
