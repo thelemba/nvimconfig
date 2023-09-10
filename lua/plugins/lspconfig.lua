@@ -12,7 +12,24 @@ local on_attach = function(client,bufnr)
      
 end
 
-require('lspconfig').lua_ls.setup {}
-require('lspconfig').omnisharp.setup {}
-require('lspconfig').csharp_ls.setup {}
+require('lspconfig').lua_ls.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  settings = {
+    Lua = {
+      diagnostics = {
+        globals = {'vim'}
+      }
+    }
+  }
+}
+require('lspconfig').omnisharp.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  handlers = {
+    ['textDocument/definition'] = require('omnisharp_extended').handler,
+  
+  },
+  cmd = { 'omnisharp','--languageserver','--hostPID',tostring(vim.fn.getpid())},
+}
 

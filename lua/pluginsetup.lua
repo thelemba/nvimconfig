@@ -36,6 +36,9 @@ return require('packer').startup(function(use)
 
   -- Color Scheme
   use 'ellisonleao/gruvbox.nvim'
+  
+  -- Indent
+  use "lukas-reineke/indent-blankline.nvim"
 
   -- Completion
   use 'hrsh7th/nvim-cmp'
