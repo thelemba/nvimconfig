@@ -35,13 +35,16 @@ return require('packer').startup(function(use)
   }
 
   -- Color Scheme
-  use 'AlexvZyl/nordic.nvim'
   use 'ellisonleao/gruvbox.nvim'
-  -- cmp 
+
+  -- Completion
   use 'hrsh7th/nvim-cmp'
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-path'
   use 'hrsh7th/cmp-cmdline'
+  use 'hrsh7th/cmp-nvim-lua'
+  use 'hrsh7th/cmp-nvim-lsp'
+  use 'hrsh7th/cmp-nvim-lsp-signature-help'
 
 -- snippet
   use 'saadparwaiz1/cmp_luasnip'
@@ -50,9 +53,10 @@ return require('packer').startup(function(use)
 
 -- LSP
   use {
-      "williamboman/mason.nvim",
-      "williamboman/mason-lspconfig.nvim",
-      "neovim/nvim-lspconfig",
+      'williamboman/mason.nvim',
+      'williamboman/mason-lspconfig.nvim',
+      'neovim/nvim-lspconfig',
+      'Hoffs/omnisharp-extended-lsp.nvim'
   }
   -- Treesitter
   use {

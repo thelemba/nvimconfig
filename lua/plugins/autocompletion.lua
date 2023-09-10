@@ -1,4 +1,4 @@
-require('luasnip.loaders.from_vscode').lazy_load()
+require('luasnip.loaders.from_vscode').load()
 local cmp = require'cmp'
 
 vim.opt.completeopt = 'menu,menuone,noselect'
@@ -22,20 +22,28 @@ cmp.setup({
  
   snippet = {
     expand = function(args)
-      luasnip.lsp_expand(args.body)
+      snip.lsp_expand(args.body)
     end,
   },
 
   sources = cmp.config.sources({
+  { name = 'nvim_lsp_signature_help' },
+  { name = 'nvim_lua'},
+  { name = 'nvim_lsp'},
 	{ name = 'luasnip'},
 	{ name = 'buffer'},
 	{ name = 'path'},
   }),
 
+  window = {
+    documentation = cmp.config.window.bordered()
+  },
+
   experimental = {
     native_menu = false,
     ghost_text = true,
   },
+
 
 mapping = {
 

@@ -7,6 +7,8 @@ require('telescope').setup{
         ['C-k>'] = action.move_selection_previous,
         ['C-j>'] = action.move_selection_next
       }
-    }
+    },
+
+    file_ignore_patterns = {'.meta'},
   }
 }
