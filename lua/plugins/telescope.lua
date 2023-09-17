@@ -9,6 +9,12 @@ require('telescope').setup{
       }
     },
 
+    pickers = {
+      find_files = {
+        theme = 'dropdown', 
+      }
+    },
+
     file_ignore_patterns = {'.meta'},
   }
 }

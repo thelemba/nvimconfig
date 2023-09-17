@@ -36,6 +36,7 @@ return require('packer').startup(function(use)
 
   -- Color Scheme
   use 'ellisonleao/gruvbox.nvim'
+  use 'Mofiqul/dracula.nvim'
   
   -- Indent
   use "lukas-reineke/indent-blankline.nvim"
